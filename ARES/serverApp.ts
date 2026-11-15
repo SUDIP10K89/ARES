@@ -5,7 +5,7 @@ import {
   M20WaypointElevationSample,
 } from './src/analysis/jezeroRegionalGrid';
 
-const NASA_API_KEY = process.env.NASA_API_KEY || 'DEMO_KEY';
+const NASA_API_KEY = process.env.NASA_API_KEY || 'wdQd9Nbf6hjhRzRQdHbH8TJngmBDcwWBnKmMzJnF';
 
 const app = express();
 app.use(express.json({ limit: '2mb' }));
