@@ -5,7 +5,7 @@ import {
   M20WaypointElevationSample,
 } from './src/analysis/jezeroRegionalGrid';
 
-const NASA_API_KEY = process.env.NASA_API_KEY || 'Demo';
+const NASA_API_KEY = import.meta.env.VITE_NASA_API_KEY || 'Demo';
 
 const app = express();
 app.use(express.json({ limit: '2mb' }));
@@ -42,7 +42,7 @@ app.get('/api/health', (_req, res) => {
       nasaMmgis: 'https://mars.nasa.gov/mmgis-maps',
       nasaImageLibrary: 'https://images-api.nasa.gov',
       nasaOpenApis: 'https://api.nasa.gov',
-      nasaKeyConfigured: Boolean(process.env.NASA_API_KEY),
+      nasaKeyConfigured: Boolean(import.meta.env.VITE_NASA_API_KEY),
     },
   });
 });
